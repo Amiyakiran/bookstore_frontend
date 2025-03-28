@@ -1,0 +1,69 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: "Playfair Display", serif;
+}
+@import "tailwindcss";
+
+
+header{
+  background-image: url('https://images.unsplash.com/photo-1532012197267-da84d127e765?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Ym9va3xlbnwwfHwwfHx8MA%3D%3D');
+  width: 100%;
+  height: 93vh;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  
+}
+
+
+
+
+header #main{
+  width: 100%;
+  height: 93vh;
+  background-color: rgba(0, 0, 0, 0.269);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+  
+}
+header p {
+  text-align: center;
+}
+
+#loginBg{
+/*   background-color: rgba(135, 133, 147, 0.516); */
+background-image: url('https://images.unsplash.com/photo-1610072175216-df383b91b89d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+background-size: cover;
+
+
+}
+
+#allB .card img:hover{
+  transform: scaleX(1.1);
+  transition: 1s;
+}
+
+#career:hover{
+  transform: scale(1.03);
+  transition: 0.2s;
+}
+
+#profile{
+ /*  background-image: linear-gradient(to left bottom , #1E2939 , grey); */
+ background-color: #1E2939;
+ height: 300px;
+}
+
+
+@media(max-width:768px){
+  #profile{
+    height: 400px;
+  }
+}
+
+
+
