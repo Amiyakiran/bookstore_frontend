@@ -17,6 +17,13 @@ function Header() {
   const [existingImage, setexistingImage] = useState("")
   const { editProfile } = useContext(updateUserDetailsContext)
 
+
+  const handlelogout = ()=>{
+    sessionStorage.removeItem("userDetails")
+    sessionStorage.removeItem("token")
+    navigate('/')
+  }
+
   useEffect(() => {
     if (sessionStorage.getItem("token")) {
       const token = sessionStorage.getItem("token")
@@ -57,7 +64,7 @@ function Header() {
                       <FontAwesomeIcon icon={faAddressCard} className='mx-3 ' /> Profile
                     </Dropdown.Item>
                   {/* </Link> */}
-                  <Dropdown.Item>
+                  <Dropdown.Item onClick={handlelogout}>
                     <FontAwesomeIcon icon={faPowerOff} className='mx-3 ' /> Logout
                   </Dropdown.Item>
                   {/* <Dropdown.Item  to={'/profile'} >

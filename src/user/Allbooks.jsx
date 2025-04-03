@@ -38,8 +38,8 @@ function Allbooks() {
       }
    }
 
-   /*  console.log(allBooks);
-     */
+  console.log(allBooks);
+    
 
    const filter = (data) => {
       // console.log(data);
@@ -153,7 +153,8 @@ function Allbooks() {
                   <div className="col-md-10">
 
                      <div className="row" id="allB" >
-                        {allBooks?.map((book, index) => (
+                        {allBooks?.length>0?
+                        allBooks?.map((book, index) => (
                            <div className="col-md-3 mt-4" key={index} hidden={book?.status == 'active' || book?.status == 'sold'}>
                               <div className=' p-3 card shadow rounded-0 border-0  text-center'>
                                  <Link to={`/view-book/${book?._id}`}> <img src={book?.imageurl} alt="no image" className='w-100' style={{ height: '300px' }} /></Link>
@@ -162,7 +163,9 @@ function Allbooks() {
                                  <button onClick={() => makepayment(book)} className='btn btn-primary mt-2 rounded-0'>Buy - $ {book?.discountPrice}</button>
                               </div>
                            </div>
-                        ))}
+                        )):
+                        <p>All Books sold out</p>
+                        }
 
                      </div>
                   </div>
