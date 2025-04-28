@@ -3,8 +3,10 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import {  faPowerOff } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useNavigate } from 'react-router-dom';
 
 function AdminHeader() {
+  const navigate = useNavigate()
   const handlelogout = ()=>{
     sessionStorage.removeItem("userDetails")
     sessionStorage.removeItem("token")
