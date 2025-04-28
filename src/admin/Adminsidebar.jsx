@@ -17,6 +17,7 @@ function Adminsidebar() {
      const [settingCheck , setSettingCheck] = useState(false)
      const location = useLocation()
      const {adminProfileStatus} = useContext(adminProfileUpdateContext)
+     const [username , setUsername] = useState("")
 
     const filter = (data) => {
         if (data == 'allBooks') {
@@ -48,6 +49,7 @@ function Adminsidebar() {
             console.log(user);
             
             setExistingAdminImage(user.photo)
+            setUsername(user.username)
           }
           console.log(existingAdminImage);
           
@@ -81,7 +83,7 @@ function Adminsidebar() {
 
             <img src={existingAdminImage ? `${serverUrl}/upload/${existingAdminImage}` : "https://cdn-icons-png.freepik.com/512/8742/8742495.png"} alt="no image" style={{ width: '150px', height: '150px', borderRadius: '50%' }} className='mt-5' />
 
-            <h4 className='my-3'>Username</h4>
+            <h4 className='my-3'>{username}</h4>
             <div className='mb-5'>
                 <FontAwesomeIcon className='d-md-none fa-2x text-blue-900' icon={faBars} onClick={() => { setStatus(!status) }} />
                 <div className={` ${status ? 'd-block mt-4' : 'mt-4 d-md-block d-none'}`} >

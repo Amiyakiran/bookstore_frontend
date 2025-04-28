@@ -145,7 +145,7 @@ function EditUserDetails() {
                             <input type="file" id='profileImage' style={{ display: 'none' }} onChange={(e) => handleUpdateUpload(e)} />
                             {
                                 existingImage == "" ?
-                                    <img src={updatePreview ? updatePreview : 'https://cdn-icons-png.freepik.com/512/8742/8742495.png'} alt="no image" style={{ width: '200px', height: '200px', borderRadius: '50%' }} /> :
+                                    <img src={updatePreview ? updatePreview : 'https://cdn-icons-png.freepik.com/512/8742/8742495.png'} alt="no image" style={{ width: '200px', height: '200px', borderRadius: '50%' }} /> : existingImage.startsWith('http')? <img src={updatePreview ? updatePreview : `${existingImage}`} alt="no image" style={{ width: '200px', height: '200px', borderRadius: '50%' }} />:
                                     <img src={updatePreview ? updatePreview : `${serverUrl}/upload/${existingImage}`} alt="no image" style={{ width: '200px', height: '200px', borderRadius: '50%' }} />
 
                             }

@@ -15,7 +15,7 @@ function Footer() {
                         <h4>ABOUT US</h4>
                         <p style={{ textAlign: 'justify' }} className='mt-4'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dolorem veniam deserunt quisquam eius ad hic maxime dicta ipsum nemo itaque necessitatibus quas nobis, illum voluptate, pariatur recusandae alias harum!</p>
                     </div>
-                    <div className="col-md-4 d-flex justify-center">
+                    <div className="col-md-4 d-md-flex mt-4 mt-md-0 justify-center">
                         <div >
                             <h4>NEWSLETTER</h4>
                             <p className='mt-4'>Stay updated with our latest trends</p>
@@ -25,7 +25,7 @@ function Footer() {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-md-4 mt-4 mt-md-0">
                         <h4>FOLLOW US</h4>
                         <p className='mt-3'>Let us be social</p>
                         <div>
