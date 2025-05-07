@@ -130,6 +130,11 @@ function Profile() {
         else {
             console.log(uploadImages);
 
+
+//             for (const key in ProjectDetails) {
+//   reqBody.append(key, ProjectDetails[key]);
+// }
+
             const reqBody = new FormData()
 
             reqBody.append("title", title)
@@ -143,6 +148,10 @@ function Profile() {
             reqBody.append("price", price)
             reqBody.append("discountPrice", discountPrice)
             reqBody.append("abstract", abstract)
+
+//             uploadImages.forEach(file => { 
+//   reqBody.append('uploadImages', file);
+// });
             for (let i = 0; i < uploadImages.length; i++) {
                 reqBody.append('uploadImages', uploadImages[i]);
             }
