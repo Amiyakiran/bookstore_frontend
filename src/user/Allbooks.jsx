@@ -50,6 +50,7 @@ function Allbooks() {
 
    //make payment
    const makepayment = async (book) => {
+      // pk_test_51RPc3kFV25RbWaaJe0mM30nVoUmabL8LV5OfXhAfGuWqAXrudLtJ99XLBkQ5cWrpwMbxIBEO2nqIlI47evDmQGGb00RAAXXIV7
       const stripe = await loadStripe('pk_test_51R7KVH4ThNmb9j6tPJw9GmtjgfG4DMBPAmaTm5ryOCehOg7zFDMIv1GgdMIdOasG6rhW3xhirEuiufSCoINhRmgR00rcjVSwyj');
       const reqbody = {
          bookDetails: book
