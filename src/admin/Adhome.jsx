@@ -156,15 +156,15 @@ function Adhome() {
                   <p> Annual Turn Over</p>
 
 
-                  <ResponsiveContainer width="100%" height="100%" >
+                  <ResponsiveContainer width="100%" height="100%" >//This component makes the chart responsive, meaning it automatically adjusts to the size of its parent container.
                     <BarChart width={700} height={250} data={data}>
-                      <CartesianGrid strokeDasharray="3 3" />
-                      <XAxis dataKey="name" />
-                      <YAxis />
-                      <Tooltip />
-                      <Legend />
-                      <Bar dataKey="pv" fill="#8884d8" />
-                      <Bar dataKey="uv" fill="#82ca9d" />
+                      <CartesianGrid strokeDasharray="3 3" />//Adds a grid to the chart background.strokeDasharray="3 3" makes dashed grid lines (3px dash, 3px gap).
+                      <XAxis dataKey="name" />//Defines the X-axis of the chart. dataKey="name" tells the chart to use the name field from each data object for X-axis labels.
+                      <YAxis />//Adds a Y-axis that automatically scales based on the data.
+                      <Tooltip />//Adds a hover tooltip to display data values interactively.
+                      <Legend />//Adds a legend to identify each data series (in this case, pv and uv).
+                      <Bar dataKey="pv" fill="#8884d8" />//Renders bars for the pv data field using a purple color (#8884d8).
+                      <Bar dataKey="uv" fill="#82ca9d" />//Renders bars for the uv data field using a green color (#82ca9d).
                     </BarChart>
                   </ResponsiveContainer>
 
@@ -178,7 +178,26 @@ function Adhome() {
                   <ResponsiveContainer width="100%" height="100%" >
                     <PieChart width={730} height={250}>
                       <Pie data={data01} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={50} fill="#8884d8" />
+                      //data={data01}: Uses data01 array as the source for this pie.
+
+                      {/* dataKey="value": Uses the value field from each object as the slice size.
+                      
+                      nameKey="name": Uses the name field as the label.
+                      
+                      cx="50%" cy="50%": Centers the pie chart horizontally and vertically.
+                      
+                      outerRadius={50}: Sets how big the pie slices will be (radius).
+                      
+                      fill="#8884d8": Purple color fill for the pie slices. */}
                       <Pie data={data02} dataKey="value" nameKey="name" cx="50%" cy="50%" innerRadius={60} outerRadius={80} fill="#82ca9d" label />
+
+                            {/*                       innerRadius={60} and outerRadius={80} makes this a ring (donut).
+                            
+                            data={data02} pulls from a different dataset.
+                            
+                            label: Enables text labels for each slice.
+                            
+                            Fill is green (#82ca9d). */}
                     </PieChart>
                   </ResponsiveContainer>
 
